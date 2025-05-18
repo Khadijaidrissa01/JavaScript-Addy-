@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        mycountry = {
+            conuntry:"Tanzania",
+            population:1256780900,
+            capitalCity:"Dar-es-Salam",
+            language:"Swahili",
+            neighbour:["Kenya","Burundi","uganda"]
+        }
+        console.log(`${mycountry.conuntry} has ${mycountry.population} million people ${mycountry.language} -speaking people ${mycountry.neighbour.length} neighbouring countries and a capital called ${mycountry.capitalCity}.`);
+        mycountry.population +=2;
+        mycountry["population"] -=2;
+        mycountry.describe = function(){
+            console.log(`${this.conuntry} has ${this.population} million people ${this.language} -speaking people ${this.neighbour.length} neighbouring countries and a capital called ${this.capitalCity}.`);
+        }
+        mycountry.describe();
+        mycountry.checkIsland = function(){
+            this.isIsland=(this.neighbour.length==0);
+        }
+        mycountry.checkIsland();
+        console.log(mycountry.isIsland);
+    </script>
+</body>
+</html>
